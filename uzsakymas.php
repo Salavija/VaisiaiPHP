@@ -1,0 +1,39 @@
+<?php
+
+$backgroundImg = 'Http:localhost/vaisiai/views/image/vaisiai.jpg';
+$template = 'home.php';
+
+$dir = __DIR__;
+$base = $_SERVER['SCRIPT_NAME'];
+$index = strpos($_SERVER['SCRIPT_NAME'], 'index.php');
+if ($index !== false) {
+    $base = substr($_SERVER['SCRIPT_NAME'], 0, $index);
+}
+// var_dump($base);
+
+if ($_SERVER['REQUEST_URI'] == $base) {
+    $ctrl = 'orders/list';
+} else {
+    $ctrl = substr($_SERVER['REQUEST_URI'], strlen($base));
+    $index = strpos($ctrl, '?');
+    if ($index !== false) {
+        $ctrl = substr($ctrl, 0, $index);
+    }
+}
+
+if (!file_exists('controllers/'.$ctrl.'.php')) {
+    $ctrl = 'orders/list';
+}
+
+// // var_dump("base = $base");
+// // var_dump("ctrl = $ctrl");
+// // var_dump("dir = $dir");
+
+include 'views/header.php';
+include 'views/navbar.php';
+include 'views/menu.php';
+include 'views/orders/forma.php';
+include 'controllers/'.$ctrl.'.php';
+include 'views/footer.php';
+
+?>

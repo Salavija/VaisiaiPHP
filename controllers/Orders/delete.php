@@ -7,4 +7,4 @@ echo "AHA - nori kazkas istrinti  irasa: $id";
 
 $a = Orders::get($id);
 
-include $dir . '/views/radars/ask_delete.php';
+include $dir . '/views/orders/ask_delete.php';

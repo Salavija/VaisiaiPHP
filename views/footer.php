@@ -1,44 +1,35 @@
-<footer class="pt-4 my-md-5 pt-md-5 border-top">
-	<div class="row">
-		  <div class="col-6 col-md">
-		    <h3>Susisiekite</h3>
+	<footer id="footer">
+		<ul class="icons">
+			<h4>Susisiekite</h4>
 		    <ul class="list-unstyled text-small">
-		      <td class="text-muted"><b>Mobilus</b></td>
-		      <td class="text-muted">+370 655 94863</td><br>
-		      <td class="text-muted"><b>Adresas</b></td>
-		      <td class="text-muted">Pilies g. 15, Kaunas</td><br>
-		      <td><?php include('darbovalandos.php'); ?></td>
+			      <td class="text-muted"><b>Mobilus</b></td>
+			      <td class="text-muted">+370 655 94863</td><br>
+			      <td class="text-muted"><b>Adresas</b></td>
+			      <td class="text-muted">Pilies g. 15, Kaunas</td><br>
+			      <td><?php include('darbovalandos.php'); ?></td>
 		    </ul>
-		  </div>
-		  <div class="col-6 col-md">
-		    <h3>Darbo laikas</h3>
+		    <h4>Darbo laikas</h4>
 		    <ul class="list-unstyled text-small">
-			          <strong>Working hours</strong>
 			          	<td>
-			          <em>Monday - Wednesday</em>
+			          <em>Pirmadienį - trečiadienį</em>
 			          15:00 - 18:00<br>
 						</td>
 						<td>
-			          <em>Friday - Saturday</em>
+			          <em>Penktadienį - šeštadienį</em>
 			          12:00 - 18:00<br>
 			          </td>
 			          <td>
-			          <em>Thursday and Sunday</em>
-			          Closed<br>
+			          <em>Ketvirtadienį ir sekmadienį</em>
+			          Nedirbame<br>
 			          </td>
 		    </ul>
+          	<ul class="copyright">
+				<li>&copy; Copyright 2018 </li><li>Aurelija Ragaisyte</a></li>
+			</ul>
+		    </ul>
 		  </div>
-		  <div class="col-6 col-md">
-			<?php
-			date_default_timezone_set('Europe/Vilnius');
-			$today = date('F j, Y');
-			$this_year = date('Y');?>
-		  </div>
-		</div>
-		<div class="inner">
-		<div id="copyright text-right">© Copyright 2018 Aurelija Ragaisyte</div>
-	</div>
-</footer>
+		</footer>
+	</footer>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

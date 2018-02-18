@@ -11,10 +11,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/orders/forma.php">Užsakyti<i class="fa fa-user-plus"></i></a></li>
+                <li><a href="../orders/forma.php">Užsakyti<i class="fa fa-user-plus"></i></a></li>
             </ul>
-            <form class="navbar-form navbar-right" method="post" action="search.php?go"  id="searchform">      <input  type="text" name="name"> 
+                <form class="navbar-form navbar-right"  action="search.php" method='GET' id="searchform">
+                    <input name='filter' type='text' placeholder="Filtras">
                  <button type="submit" class="btn btn-default">Ieškoti</button> 
+                </form>
             </form>
         </div>
     </div>

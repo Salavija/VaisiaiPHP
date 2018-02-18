@@ -1,12 +1,11 @@
 <?php
-require_once 'db.php';
-
+require_once $dir . '/models/db.php';
 $conn = connectDB();
 
-$sql = $conn->prepare("INSERT INTO auto (date, number, distance, time) VALUES(?, ?, ?, ?)");
+$sql = $conn->prepare("INSERT INTO orders (date, name, surname, productId) VALUES(?, ?, ?, ?)");
 
-$sql->bind_param("ssdd", $_REQUEST['date'], $_REQUEST['number'], $_REQUEST['distance'], $_REQUEST['time']);
+$sql->bind_param("ssdd", $_REQUEST['date'], $_REQUEST['name'], $_REQUEST['surname'], $_REQUEST['productId']);
  $sql->execute();
- echo "<h2>Įrašas pridėtas</h2>"
+ echo "<h2>Užsakymas priimtas</h2>" . include 'orders/list.php';
 
 ?>

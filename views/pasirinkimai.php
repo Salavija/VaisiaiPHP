@@ -2,46 +2,46 @@
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Small</h4>
+            <h4 class="my-0 font-weight-normal">Mazas</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">20 Eur <small class="text-muted">/ unit</small></h1>
-            <img src="../image/mazas.jpg" alt="Vaisiai Pic" height="200" width="200">
+            <h1 class="card-title pricing-card-title">15 Eur <small class="text-muted">/ vnt</small></h1>
+            <img src="http://localhost/VaisiaiPHP/views/image/mazas.jpg" alt="Vaisiai Pic1" height="200" width="200">
             <ul class="list-unstyled mt-3 mb-4">
-              <li>5 kg. fruits</li>
-              <li>10 different fruits variations</li>
-              <li>Including exotic fruits</li>
+              <li>5 kg. Vaisių</li>
+              <li>10 skirtingų rūšių</li>
             </ul>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Medium</h4>
+            <h4 class="my-0 font-weight-normal">Vidutinis</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">30 Eur <small class="text-muted">/ unit</small></h1>
-            <img src="../image/vidutinis.jpg" alt="Vaisiai Pic" height="200" width="200">
+            <h1 class="card-title pricing-card-title">25 Eur <small class="text-muted">/ vnt</small></h1>
+            <img src="http://localhost/VaisiaiPHP/views/image/vidutinis.jpg" alt="Vaisiai Pic2" height="200" width="200">
             <ul class="list-unstyled mt-3 mb-4">
-              <li>10 kg. fruits</li>
-              <li>15 different fruits variations</li>
-              <li>Including exotic fruits</li>
+              <li>10 kg. vaisių</li>
+              <li>15 skitingų rūšių</li>
+              <li>Įeina ir egzotiniai vaisiai</li>
             </ul>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Big</h4>
+            <h4 class="my-0 font-weight-normal">Didelis</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">39 Eur <small class="text-muted">/ unit</small></h1>
-            <img src="../image/didelis.jpg" alt="Vaisiai Pic" height="200" width="200">
+            <h1 class="card-title pricing-card-title">34 Eur <small class="text-muted">/ vnt</small></h1>
+            <img src="http://localhost/VaisiaiPHP/views/image/didelis.jpg" alt="Vaisiai Pic3" height="200" width="200">
             <ul class="list-unstyled mt-3 mb-4">
-              <li>15 kg. fruits</li>
-              <li>18 different fruits variations</li>
-              <li>Including rare exotic fruits</li>
+              <li>15 kg. vaisių</li>
+              <li>18 skirtingų vaisių rūšių</li>
+              <li>Įeina ir reti egzotiniai vaisiai</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary" action="../orders/forma.php">Užsakyti</button>
           </div>
         </div>
       </div>
     </div>
+
+<?php include 'views/orders/forma.php' ?>

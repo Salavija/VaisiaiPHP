@@ -1,14 +1,14 @@
 <?php
 
 require_once $dir . '/models/db.php';
+$conn = connectDB();
 
-class Radar 
+class Order 
 {
     public $id;
     public $date;
     public $name;
     public $surname;
-    public $price;
     public $productId;
 
     function assignFromDB($row) 
@@ -17,14 +17,13 @@ class Radar
         $this->date = $row['date'];
         $this->name = $row['name'];
         $this->surname = $row['surname'];
-        $this->price = $row['price'];
         $this->productId = $row['productId'];
     }
 
     static function all($limit, $offset) 
     {
         $conn = connectDB();
-        $sql = 'SELECT * FROM orders ORDER BY `id`, `date` DESC';
+        $sql = 'SELECT * FROM orders ORDER BY `id` DESC';
 
         $result = $conn->query($sql);
 
