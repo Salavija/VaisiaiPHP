@@ -10,21 +10,3 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" type="text/css" href="app.css">
     </head>
-
-	<header id="header" class="alt">
-		<h1><a href="index.html">Vaisių krepšeliai</a></h1>
-		<nav id="nav">
-			<ul>
-				<li class="special">
-					<a href="#menu" class="menuToggle"><span>Meniu</span></a>
-					<div id="menu">
-						<ul>
-							<li><a href="index.html">Pagrindinis</a></li>
-							<li><a href="../views/orders/forma.php">Užsakyti</a></li>
-							<li><a href="./views/orders/list.php">Užsakymų sąrašas</a></li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-		</nav>
-	</header>

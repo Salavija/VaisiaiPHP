@@ -1,5 +1,21 @@
-<?php require_once $dir . 'http://localhost/VaisiaiPHP/models/db.php'
-$conn = connectDB(); ?>
+<?php $servername = "localhost";
+$username = "admin";
+$password = "labaislaptas123";
+$dbname = "vaisiainaujas";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+    $sql = 'SELECT id, date, name, surname, productId FROM orders ORDER BY id DESC LIMIT ? OFFSET ?';
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('ii', $num_items, $offset);
+    $stmt->execute();
+
+    $stmt->bind_result($id, $date, $name, $surname, $productId);
+?>
 
 <table>
     <tr>
@@ -10,7 +26,7 @@ $conn = connectDB(); ?>
         <th>Prekė</th>
     </tr>
 
- $nr = 1 + $offset; ?>
+ <?php $nr = 1 + $offset; ?>
     <?php  while($stmt->fetch()): ?> 
         <tr>
             <td><?= $nr++ ?></td>
@@ -19,10 +35,8 @@ $conn = connectDB(); ?>
             <td><?= $name ?></td>
             <td><?= $surname ?></td>
             <td><?= $productId ?></td>
-        <td>
-        <a href="<?= $base ?>orders/edit?id=<?= $orders->id ?>">Redaguoti</a> 
-        <a href="<?= $base ?>orders/delete?id=<?= $orders->id ?>">Trinti</a> 
-        </td>
+            <td><a href="delete.php?id=<?php echo $id;  ?>">trinti</a></td>
+            <td><a href="edit.php?id=<?php echo $id;  ?>">taisyti</a></td>
     </tr>
 <?php endwhile; ?>
 </table>

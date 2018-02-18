@@ -5,8 +5,10 @@
 </form>
  <br>
 <?php 
+require_once $dir . '/models/db.php';
+$conn = connectDB();
 
-require_once $dir . 'views/orders/list.php';
+require_once 'views/orders/list.php';
 
 $num_items = 10;
 
@@ -21,6 +23,13 @@ lentele($conn, $num_items, $offset);
 echo '<hr>';
 
 $conn->close();
+
+include 'views/header.php';
+include 'views/navbar.php';
+include 'views/menu.php';
+include 'views/orders/forma.php';
+include 'controllers/'.$ctrl.'.php';
+include 'views/footer.php';
 
 ?>
         <?php if ($offset > 0): ?>

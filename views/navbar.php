@@ -13,10 +13,6 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../orders/forma.php">Užsakyti<i class="fa fa-user-plus"></i></a></li>
             </ul>
-                <form class="navbar-form navbar-right"  action="search.php" method='GET' id="searchform">
-                    <input name='filter' type='text' placeholder="Filtras">
-                 <button type="submit" class="btn btn-default">Ieškoti</button> 
-                </form>
             </form>
         </div>
     </div>
